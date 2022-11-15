@@ -1,10 +1,7 @@
 
 /* цвет основного текста черный #212121 */
-
 /* цвет вторичного текста белый #757575 */
-
 /* акцент голубой #2196F3; */
-
 /* фон кнопки голубий #2196F3*/
 
 :root {
@@ -63,6 +60,7 @@ body {
 }
 
 .list {
+    display: flex;
     list-style: none;
 }
 
@@ -98,9 +96,9 @@ body {
     display: flex;
 
     font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 }
 
 .item {
@@ -112,6 +110,21 @@ body {
 
 .item:last-child {
     margin-right: 0;
+}
+
+.main-contact {
+    display: flex;
+    align-items: center;
+}
+
+.thumbs {
+    margin-right: 10px;
+}
+
+.main-border:hover {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .site .link {
@@ -136,6 +149,8 @@ body {
     outline: 2px solid red;
 } */
 
+/* іконкі */
+
 .site-auth {
     margin: 0;
     padding-left: 0;
@@ -144,21 +159,12 @@ body {
     align-items: center;
 }
 
-.site-auth .link-main {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    margin-right: 50px;
-}
-
 .site-auth .link {
     text-decoration: none;
 }
 
 .site-auth .link-item {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 
 .site-auth .link-item {
@@ -185,12 +191,20 @@ body {
 }
 
 .site-auth .link-item {
+    display: flex;
+    align-items: center;
+    
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
 
     color: var(--second-color);
+}
+
+.site-auth .link-icon {
+    fill: currentColor;
+    margin-right: 10px;
 }
 
 /* секція ефективні рішення */
@@ -215,6 +229,20 @@ body {
     padding-bottom: 200px;
     text-align: center;
     background-color: var(--section-background-color);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4)
+        ), 
+        url("../images/Img\(1\).png");
+}
+
+.overlay {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: inherit;
 }
 
 /* кнопка "Замовити послугу"*/
@@ -266,11 +294,32 @@ body {
     margin-right: 0;
 }
 
-/* .list-items li {
-    outline: 2px solid red;
-} */
+.items::before {
+    display: block;
+    content: '';
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F5F4FA;
+    /* outline: 1px solid black; */
+    margin-bottom: 30px;
+}
 
-/* outline: 1px solid red; */
+.icon-antenna::before {
+    background-image: url("../images/icons.svg/antenna.svg");
+}
+
+.icon-clock::before {
+    background-image: url("../images/icons.svg/clock.svg");
+}
+
+.icon-diagram::before {
+    background-image: url("../images/icons.svg/diagram.svg");
+}
+
+.icon-astronaut::before {
+    background-image: url("../images/icons.svg/astronaut.svg");
+}
 
 .list-items .quote {
     margin-top: 0;
@@ -357,8 +406,8 @@ img {
 }
 
 .professionals {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 16px;
 }
 
 .excerpt {
@@ -368,6 +417,10 @@ img {
 
 .card {
     background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+        0px 1px 1px rgba(0, 0, 0, 0.14), 
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
 }
 
 .card {
@@ -388,13 +441,100 @@ img {
 
 .subject {
     margin: 0;
-
+    
     font-weight: 400;
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
 
     color: var(--second-color);
+}
+
+/* іконки секції Наша команда */
+
+.card .thumb {
+    display: flex;
+    padding: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 30px;
+    justify-content: space-between
+}
+
+.element {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.element:hover {
+    background-color: var(--accent-color);
+}
+
+.elements {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon {
+    fill: #AFB1B8;
+}
+
+.elements:hover .social-icon {
+    fill: var(--button-text-color);
+}
+
+/* секція наші клієнти */
+
+.pre-clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients {
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.clients {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.clients-icon {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.clients-after {
+    display: flex;
+}
+
+.main-company {
+    display: flex;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.company {
+    display: flex;
+    padding: 16px 32px;
+    fill:#AFB1B8;
+}
+
+.main-company:hover .company
+.main-company:focus .company {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 /* секція контакти */
@@ -490,6 +630,66 @@ img {
     text-decoration: none;
 }
 
+.slogan {
+    display: flex;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 12px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--button-text-color);
+}
+
+/* іконкі футера */
+
+.contacts {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lists {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contacts-address {
+    margin-right: 70px;
+}
+
+.networks {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;;
+    background-color: gray;
+    margin-right: 10px;
+    
+}
+
+.networks:last-child {
+    margin-right: 0;
+}
+
+.networks:hover {
+    background-color: var(--accent-color);
+}
+
+.instagram {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* сторінка ПОРТФОЛІО*/
 
 /* список кнопок */
@@ -503,6 +703,8 @@ img {
     list-style: none;
 }
 
+/* visually-hidden */
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -515,6 +717,7 @@ img {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+/* visually-hidden */
 
 .hero-button {
     display: flex;
@@ -592,6 +795,12 @@ img {
 
 .cards:nth-child(3n) {
     margin-right: 0;
+}
+
+.border:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .link {

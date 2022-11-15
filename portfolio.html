@@ -18,14 +18,28 @@
                 <a href="/" class="logo">Web<span class="title">Studio</span>
                 </a>
                 <ul class="site list">
-                    <li class="item"><a class="link" href="./index.html">Студія</a></li>
-                    <li class="item"><a class="link current" href="/">Портфоліо</a></li>
+                    <li class="item"><a class="link current" href="/">Студія</a></li>
+                    <li class="item"><a class="link" href="./portfolio.html">Портфоліо</a></li>
                     <li class="item"><a class="link" href="/">Контакти</a></li>
                 </ul>
             </nav>
             <ul class="site-auth list">
-                <li class="item"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                <li><a class="link-item" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                <li class="item">
+                    <a class="link main-contact mail-icon" href="mailto:info@devstudio.com">
+                        <svg class="link-icon" width="16" height="12">
+                            <use href="./images/icons.svg/symbol-defs.svg#icon-envelope"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="link-item tel-icon" href="tel:+380961111111">
+                        <svg class="link-icon" width="10" height="16">
+                            <use href="./images/icons.svg/symbol-defs.svg#icon-smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </li>
             </ul>
         </div>
     </header>
@@ -41,7 +55,7 @@
                     <li class="filters"><button class="btn" type="button">Маркетинг</button></li>
                 </ul>
                 <ul class="list card-second">
-                    <li class="cards">
+                    <li class="cards border">
                         <a href="/" class="link">
                             <img src="./images/filters1.jpg" alt="filters1" width="370">
                             <div class="after-cards">
@@ -50,7 +64,7 @@
                             </div> 
                         </a>
                     </li>
-                    <li class="cards">
+                    <li class="cards border">
                         <a href="/" class="link">
                             <img src="./images/filters2.jpg" alt="filters2" width="370">
                             <div class="after-cards">
@@ -59,7 +73,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="cards">
+                    <li class="cards border">
                         <a href="/" class="link">
                             <img src="./images/filters3.jpg" alt="filters3" width="370">
                             <div class="after-cards">
@@ -68,7 +82,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="cards">
+                    <li class="cards border">
                         <a href="/" class="link">
                             <img src="./images/filters4.jpg" alt="filters4" width="370">
                             <div class="after-cards">
@@ -77,7 +91,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="cards">
+                    <li class="cards border">
                         <a href="/" class="link">
                             <img src="./images/filters5.jpg" alt="filters5" width="370">
                             <div class="after-cards">
@@ -86,7 +100,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="cards">
+                    <li class="cards border">
                         <a href="/" class="link">
                             <img src="./images/filters6.jpg" alt="filters6" width="370">
                             <div class="after-cards">
@@ -95,7 +109,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="cards">
+                    <li class="cards border">
                         <a href="/" class="link">
                             <img src="./images/filters7.jpg" alt="filters7" width="370">
                             <div class="after-cards">
@@ -104,7 +118,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="cards">
+                    <li class="cards border">
                         <a href="/" class="link">
                             <img src="./images/filters8.jpg" alt="filters8" width="370">
                             <div class="after-cards">
@@ -113,7 +127,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="cards">
+                    <li class="cards border">
                         <a href="/" class="link">
                             <img src="./images/filters9.jpg" alt="filters9" width="370">
                             <div class="after-cards">
@@ -128,15 +142,57 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <a href="/" class="logo">Web<span class="title">Studio</span></a>
-            <address class="address">
-                <ul class="address-list decoration list">
-                    <li><a class="link" href="https://goo.gl/maps/6XQhRdbRvdG7q7pF7">м. Київ, пр-т Лесі Українки, 26</a>
-                    </li>
-                    <li><a class="mail" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                    <li><a class="tel" href="tel:+380961111111">+38 096 111 11 11</a></li>
-                </ul>
-            </address>
+            <ul class="contacts">
+                <li class="contacts-address">
+                    <div>
+                        <a href="/" class="logo">Web<span class="title">Studio</span></a>
+                        <address class="address">
+                            <ul class="address-list decoration list">
+                                <li><a class="link" href="https://goo.gl/maps/6XQhRdbRvdG7q7pF7">
+                                м. Київ, пр-т Лесі Українки, 26</a>
+                                </li>
+                                <li><a class="mail" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                                <li><a class="tel" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                            </ul>
+                        </address>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="slogan">приєднуйтесь</p>
+                        <ul class="lists">
+                            <li class="networks">
+                                <a href="" class="instagram">
+                                    <svg class="icons-link" width="20" height="20">
+                                        <use href="./images/icons.svg/symbol-defs.svg#icon-instagram1"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="networks">
+                                <a href="" class="instagram">
+                                    <svg class="icons-link" width="20" height="20">
+                                        <use href="./images/icons.svg/symbol-defs.svg#icon-twitter1"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="networks">
+                                <a href="" class="instagram">
+                                    <svg class="icons-link" width="20" height="20">
+                                        <use href="./images/icons.svg/symbol-defs.svg#icon-facebook1"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="networks">
+                                <a href="" class="instagram">
+                                    <svg class="icons-link" width="20" height="20">
+                                        <use href="./images/icons.svg/symbol-defs.svg#icon-linkedin1"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
     </footer>
 </body>
